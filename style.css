@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+	background-color: grey;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+}
+
+.dashboard {
+	grid-area: 1 / 1 / 4 / 2;
+}
