@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link rel="stylesheet" href="normalize.css" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
@@ -9,8 +10,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<div>
+			<header class="header">
+				<div class="main-bar">
 					<form>
 						<label for="searchBar"
 							><box-icon name="search"></box-icon
@@ -22,40 +23,107 @@
 						<img src="" alt="" />
 						<span>Jack Bauer</span>
 					</div>
+				</div>
+				<div class="second-bar">
+					<img src="" alt="" />
 					<div>
-						<img src="" alt="" />
-						<div>
-							<span>Hi, there,</span>
-							<h3>Jack Bauer (@bauer)</h3>
-						</div>
-						<div>
-							<button>New</button>
-							<button>Upload</button>
-							<button>Share</button>
-						</div>
+						<span>Hi, there,</span>
+						<h3>Jack Bauer (@bauer)</h3>
+					</div>
+					<div>
+						<button>New</button>
+						<button>Upload</button>
+						<button>Share</button>
 					</div>
 				</div>
 			</header>
 			<aside class="dashboard">
-				<div>
-					<box-icon name="microsoft" type="logo"></box-icon>
-					<span>Dashboard</span>
+				<div class="logo-box">
+					<img
+						src="./svg/artstation.svg"
+						alt="logo of company"
+						width="50px"
+					/>
+					Dashboard
 				</div>
 				<ul>
-					<li>Home</li>
-					<li>Profile</li>
-					<li>Messages</li>
-					<li>History</li>
-					<li>Tasks</li>
-					<li>Communities</li>
+					<li>
+						<img
+							src="./svg/home.svg"
+							alt="home icon"
+							width="20px"
+						/>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<img
+							src="./svg/card-account-details-outline.svg"
+							alt="profile icon"
+							width="20px"
+						/>
+						<a href="#">Profile</a>
+					</li>
+					<li>
+						<img
+							src="./svg/message.svg"
+							alt="message icon"
+							width="20px"
+						/>
+						<a href="#">Messages</a>
+					</li>
+					<li>
+						<img
+							src="./svg/clock-time-three.svg"
+							alt="History icon"
+							width="20px"
+						/>
+						<a href="#">History</a>
+					</li>
+					<li>
+						<img
+							src="./svg/checkbox-marked-circle-auto-outline.svg"
+							alt="task icon"
+							width="20px"
+						/>
+						<a href="#">Tasks</a>
+					</li>
+					<li>
+						<img
+							src="./svg/account-group.svg"
+							alt="Communities icon"
+							width="20px"
+						/>
+						<a href="#">Communities</a>
+					</li>
 				</ul>
 				<ul>
-					<li>Settings</li>
-					<li>Support</li>
-					<li>Privacy</li>
+					<li>
+						<img
+							src="./svg/cog.svg"
+							alt="Settings icon"
+							width="20px"
+						/>
+						<a href="#">Settings</a>
+					</li>
+					<li>
+						<img
+							src="./svg/help-box.svg"
+							alt="Support icon"
+							width="20px"
+						/>
+						<a href="#">Support</a>
+					</li>
+					<li>
+						<img
+							src="./svg/shield-check.svg"
+							alt="Privacy icon"
+							width="20px"
+						/>
+						<a href="#">Privacy</a>
+					</li>
 				</ul>
 			</aside>
-			<main>
+			<main class="main">
 				<div class="projects">
 					<h4>Your Projects</h4>
 					<div class="card">

@@ -1,13 +1,63 @@
 * {
-	box-sizing: border-box;
-	background-color: grey;
+	font-size: 1.1rem;
+	font-family: Verdana, sans-serif;
 }
 
 .container {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
+	grid-template-areas:
+		"dashboard header"
+		"dashboard main";
+}
+
+.header {
+	grid-area: header;
+}
+
+.main-bar {
+	display: grid;
+	grid-auto-flow: column;
 }
 
 .dashboard {
-	grid-area: 1 / 1 / 4 / 2;
+	background-color: #0ea5e9;
+	grid-area: dashboard;
+}
+
+.logo-box {
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logo-box img {
+	margin: 0 1rem;
+}
+
+.dashboard,
+.dashboard a {
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+}
+
+.dashboard img {
+	fill: red;
+}
+
+.dashboard a:hover {
+	color: white;
+}
+
+.dashboard ul {
+	margin-bottom: 3rem;
+}
+
+.dashboard li {
+	list-style: none;
+	margin-bottom: 1rem;
+}
+
+.main {
+	grid-area: main;
 }
