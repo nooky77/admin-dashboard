@@ -5,7 +5,7 @@
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
+	grid-template-columns: minmax(250px, 1fr) 6fr;
 	grid-template-areas:
 		"dashboard header"
 		"dashboard main";
@@ -13,16 +13,48 @@
 
 .header {
 	grid-area: header;
+	background-color: gray;
 }
 
 .main-bar {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: minmax(100px, 2fr) minmax(250px, 1fr);
+	grid-auto-flow: column;
+}
+
+.main-bar input {
+	width: 60%;
+}
+
+.search-bar-container {
 	display: grid;
 	grid-auto-flow: column;
+	grid-template-columns: 50px minmax(200px, 1fr);
+	align-content: center;
+}
+
+.search-bar-container input,
+.search-bar-container label {
+	padding: 0.2rem 1rem;
+}
+
+.search-bar-container input {
+	border-radius: 1rem;
+}
+
+.profile-right-side {
+	margin-left: auto;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 2rem;
 }
 
 .dashboard {
 	background-color: #0ea5e9;
 	grid-area: dashboard;
+	font-weight: bold;
 }
 
 .logo-box {
@@ -60,4 +92,9 @@
 
 .main {
 	grid-area: main;
+}
+
+.avatar {
+	width: 50px;
+	border-radius: 50%;
 }
