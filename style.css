@@ -4,8 +4,9 @@
 }
 
 .container {
+	height: 100vh;
 	display: grid;
-	grid-template-columns: minmax(250px, 1fr) 6fr;
+	grid-template-columns: 250px 1fr;
 	grid-template-areas:
 		"dashboard header"
 		"dashboard main";
@@ -13,7 +14,7 @@
 
 .header {
 	grid-area: header;
-	background-color: gray;
+	background-color: #fff;
 }
 
 .main-bar {
@@ -25,6 +26,8 @@
 
 .main-bar input {
 	width: 60%;
+	background-color: #e2e8f0;
+	border: none;
 }
 
 .search-bar-container {
@@ -49,6 +52,40 @@
 	grid-auto-flow: column;
 	align-items: center;
 	gap: 2rem;
+}
+
+.second-bar {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-flow: column;
+}
+
+.second-bar-left,
+.second-bar-right {
+	display: grid;
+	grid-auto-flow: column;
+}
+
+.second-bar-left {
+	grid-template-columns: 150px 1fr;
+}
+
+.second-bar-left img {
+	justify-self: center;
+}
+
+.second-bar-right {
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.second-bar-right button {
+	background-color: #0ea5e9;
+	padding: 0.4rem 0.6rem;
+	border-radius: 1rem;
+	border: none;
+	width: 120px;
+	font-size: 1rem;
 }
 
 .dashboard {
@@ -91,10 +128,70 @@
 }
 
 .main {
+	background-color: #e2e8f0;
 	grid-area: main;
+	gap: 1rem;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas:
+		"projects announcement"
+		"projects trending";
+}
+
+.projects {
+	grid-area: projects;
+}
+
+.cards {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card,
+.announcement-card,
+.trending {
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.card {
+	border-left: 10px solid #f0b429;
+}
+
+.announcement {
+	grid-area: announcement;
+}
+
+.announcement-card > div {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+	margin-bottom: 1rem;
+}
+
+.announcement-card > div:last-child {
+	border-bottom: none;
+}
+
+.announcement-card p {
+	font-size: 0.7rem;
+	padding: 1rem;
+}
+
+.trending {
+	grid-area: trending;
+}
+
+.avatar,
+.avatar-big {
+	border-radius: 50%;
 }
 
 .avatar {
-	width: 50px;
-	border-radius: 50%;
+	width: 40px;
+}
+
+.avatar-big {
+	width: 75px;
 }
